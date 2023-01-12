@@ -19,6 +19,6 @@ from restaurant import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls')),
+    path('api/', include('restaurant.urls')),
     path('', views.index),
 ]
