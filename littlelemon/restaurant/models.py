@@ -14,7 +14,7 @@ class menu(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     inventory = models.SmallIntegerField()
     def __str__(self) -> str:
-        return self.title
+        return self.title, self.price
 
 class user(models.Model):
     username = models.CharField(max_length=255)
