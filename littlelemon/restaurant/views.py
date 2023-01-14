@@ -22,6 +22,7 @@ class bookingview(APIView):
         return Response(serializers.data)
 
 class BookingView(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = booking.objects.all()
     serializer_class = bookingSerializer
 

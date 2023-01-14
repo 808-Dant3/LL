@@ -7,7 +7,7 @@ class booking(models.Model):
     no_of_guests = models.SmallIntegerField()
     bookingDate = models.DateTimeField()
     def __str__(self) -> str:
-        return self.title
+        return self.name
 
 class menu(models.Model):
     title = models.CharField(max_length=255)
@@ -21,4 +21,4 @@ class user(models.Model):
     email = models.EmailField()
     groups = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     def __str__(self) -> str:
-        return self.title
+        return self.username
